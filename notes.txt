@@ -1,0 +1,41 @@
+
+//---------------------------------
+// Features
+//---------------------------------
+General:
+  * allow blocking when sword is drawn
+  * allow jumping, dodging and shooting crossbow in shallow water
+  * enabled toggling of enemy healthbar while in combat. will set back to false once combat has ended
+  * shortened death screen delay  
+  * show foreign subtitles
+
+Time:
+  * added minutes per second slider
+  * added toggle for military time
+
+
+//---------------------------------
+// TODO
+//---------------------------------
+General:
+  * grindstone and armor workbench as counter
+
+Roach:
+  * following / parking
+  * riding
+  * whistling
+
+Time:
+  * fast travel time??
+  * cutscene time??
+
+Travel:
+  * options to remove markers 
+  * long journey extended
+  * no borders
+  * remember map position when closed??
+
+Weight:
+  * adjust player carry weight
+  * adjust weight by category
+  * can't pick up item if over encumbered
