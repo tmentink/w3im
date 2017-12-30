@@ -2,23 +2,27 @@
 //---------------------------------
 // Features
 //---------------------------------
-General:
+Combat:
   * allow blocking when sword is drawn
   * allow jumping, dodging and shooting crossbow in shallow water
-  * enabled toggling of enemy healthbar while in combat. will set back to false once combat has ended
-  * shortened death screen delay  
-  * show foreign subtitles
+  * grindstone and workbench buffs work as counters. can optionally set their initial durations
 
 Time:
   * added minutes per second slider
   * added toggle for military time
+
+UI:
+  * enabled toggling of enemy healthbar while in combat. can optionally set back to hidden once combat has ended
+  * shortened death screen delay
+  * show foreign subtibles even when disabled
 
 
 //---------------------------------
 // TODO
 //---------------------------------
 General:
-  * grindstone and armor workbench as counter
+  * grindstone and workbench buffs effect degrades based on charge
+  * grindstone effect reduces depending on action (block)??
 
 Roach:
   * following / parking

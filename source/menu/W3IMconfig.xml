@@ -2,6 +2,19 @@
 
 <UserConfig>
 
+	<Group id="W3IM_Combat" displayName="Mods.W3IM.Combat">
+		<PresetsArray>
+			<Preset id="0" displayName="default">
+				<Entry varId="iGrindstoneCharges" value="50"/>
+				<Entry varId="iWorkbenchCharges" value="30"/>
+			</Preset>
+		</PresetsArray>
+		<VisibleVars>
+			<Var id="iGrindstoneCharges" displayName="GrindstoneCharges" displayType="SLIDER;1;200"/>
+			<Var id="iWorkbenchCharges" displayName="WorkbenchCharges" displayType="SLIDER;1;200"/>
+		</VisibleVars>
+	</Group>
+
 	<Group id="W3IM_Time" displayName="Mods.W3IM.Time">
 		<PresetsArray>
 			<Preset id="0" displayName="default">
@@ -16,6 +29,17 @@
 		<VisibleVars>
 			<Var id="iSecondsPerMinute" displayName="SecondsPerMinute" displayType="SLIDER;1;60"/>
 			<Var id="bMilitaryTime" displayName="MilitaryTime" displayType="TOGGLE"/>
+		</VisibleVars>
+	</Group>
+
+	<Group id="W3IM_UI" displayName="Mods.W3IM.UI">
+		<PresetsArray>
+			<Preset id="0" displayName="default">
+				<Entry varId="bToggleHealthbarOff" value="true"/>
+			</Preset>
+		</PresetsArray>
+		<VisibleVars>
+			<Var id="bToggleHealthbarOff" displayName="ToggleHealthbarOff" displayType="TOGGLE"/>
 		</VisibleVars>
 	</Group>
 
