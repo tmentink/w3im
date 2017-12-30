@@ -38,3 +38,8 @@
 *.sublime-workspace
 nbproject
 Thumbs.db
+
+
+# Folders to ignore
+node_modules
+packed

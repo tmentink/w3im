@@ -1,6 +1,2 @@
 # Auto detect text files and perform LF normalization
 * text=auto
-
-*.ws  diff=astextplain
-*.xml diff=astextplain
-*.csv diff=astextplain

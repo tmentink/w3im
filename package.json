@@ -1,0 +1,26 @@
+{
+  "name": "w3im",
+  "version": "1.0.0",
+  "description": "Witcher 3 Immersion Modules",
+  "main": "modW3IM",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tmentink/w3im.git"
+  },
+  "author": "Trent Mentink",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tmentink/w3im/issues"
+  },
+  "homepage": "https://github.com/tmentink/w3im#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "load-grunt-tasks": "^3.5.2",
+    "time-grunt": "^1.4.0"
+  }
+}
