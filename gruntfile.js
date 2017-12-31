@@ -35,6 +35,12 @@ module.exports = function(grunt) {
         src: "**",
         dest: "modW3IM/mods/modW3IM_Time/content/scripts/"
       },
+      ui_files: {
+        expand: true,
+        cwd: "source/modW3IM_UI/packed/content/",
+        src: "**",
+        dest: "modW3IM/mods/modW3IM_UI/content/"
+      },
       ui_other: {
         expand: true,
         filter: "isFile",
