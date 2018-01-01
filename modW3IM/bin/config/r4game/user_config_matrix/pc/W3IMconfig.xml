@@ -7,11 +7,19 @@
 			<Preset id="0" displayName="default">
 				<Entry varId="iGrindstoneCharges" value="50"/>
 				<Entry varId="iWorkbenchCharges" value="30"/>
+				<Entry varId="fReduceCharges_ParriedMult" value=".25"/>
+				<Entry varId="fReduceCharges_CounteredMult" value=".25"/>
+				<Entry varId="fReduceCharges_CriticalHitMult" value="3.5"/>
+				<Entry varId="fReduceCharges_HeavyAttackMult" value="2"/>
 			</Preset>
 		</PresetsArray>
 		<VisibleVars>
 			<Var id="iGrindstoneCharges" displayName="GrindstoneCharges" displayType="SLIDER;1;200"/>
 			<Var id="iWorkbenchCharges" displayName="WorkbenchCharges" displayType="SLIDER;1;200"/>
+			<Var id="fReduceCharges_ParriedMult" displayName="ReduceCharges_ParriedMult" displayType="SLIDER;0.0;1.0;20"/>
+			<Var id="fReduceCharges_CounteredMult" displayName="ReduceCharges_CounteredMult" displayType="SLIDER;0.0;1.0;20"/>
+			<Var id="fReduceCharges_CriticalHitMult" displayName="ReduceCharges_CriticalHitMult" displayType="SLIDER;0.0;5.0;20"/>
+			<Var id="fReduceCharges_HeavyAttackMult" displayName="ReduceCharges_HeavyAttackMult" displayType="SLIDER;0.0;5.0;20"/>
 		</VisibleVars>
 	</Group>
 

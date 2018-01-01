@@ -5,7 +5,10 @@
 Combat:
   * allow blocking when sword is drawn
   * allow jumping, dodging and shooting crossbow in shallow water
-  * grindstone and workbench buffs work as counters. can optionally set their initial durations
+  * overhauled grindstone and workbench enhancements:
+    - buffs work as counters instead of a timer
+    - can set their initial charges in the mod menu
+    - charges can be reduced depending upon the type of attack. These multipliers are set in the mod menu
 
 Time:
   * added minutes per second slider
@@ -15,14 +18,18 @@ UI:
   * enabled toggling of enemy healthbar while in combat. can optionally set back to hidden once combat has ended
   * shortened death screen delay
   * show foreign subtibles even when disabled
+  * updated witcher senses:
+    - lowered the red quest color opacity
+    - removed the yellow interaction color
+    - removed sound bubbles
 
 
 //---------------------------------
 // TODO
 //---------------------------------
 General:
-  * grindstone and workbench buffs effect degrades based on charge
-  * grindstone effect reduces depending on action (block)??
+  * add option to set enhancement effect
+  * enhancement effect degrades based on percent of charge
 
 Roach:
   * following / parking
