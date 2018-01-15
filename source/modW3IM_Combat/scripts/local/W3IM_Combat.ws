@@ -10,7 +10,7 @@ function W3IM_Combat_ApplyEnhancement(armor : bool, weapon : bool) : bool
 
 	enhancementParams = new W3EnhancementBuffParams in thePlayer;
 
-	if(armor)
+	if (armor)
 	{
 		buffParams.effectType = EET_EnhancedArmor;
 		optionName = 'iWorkbenchCharges';
@@ -29,7 +29,7 @@ function W3IM_Combat_ApplyEnhancement(armor : bool, weapon : bool) : bool
 	count = StringToFloat(theGame.GetInGameConfigWrapper().GetVarValue('W3IM_Combat', optionName));	
 	existingEnhancement = (W3RepairObjectEnhancement)arrEnhancements[0];
 
-	if(existingEnhancement)
+	if (existingEnhancement)
 	{
 		existingEnhancement.Reapply(count);
 	}
@@ -46,19 +46,6 @@ function W3IM_Combat_ApplyEnhancement(armor : bool, weapon : bool) : bool
 	}
 
 	return true;
-}
-
-function W3IM_Combat_GetAmountMultiplier(multOption : CName) : float
-{
-	var amountMult : float;
-	amountMult = 1.0f;
-	
-	if (multOption != '')
-	{
-		amountMult = StringToFloat(theGame.GetInGameConfigWrapper().GetVarValue('W3IM_Combat', multOption));
-	}
-
-	return amountMult;
 }
 
 function W3IM_Combat_ProcessReduceEnhancement(action : W3DamageAction, attackAction : W3Action_Attack, actorAttacker : CActor, actorVictim : CActor, playerAttacker : CR4Player, playerVictim : CR4Player, weaponId : SItemUniqueId) : void
@@ -95,7 +82,7 @@ function W3IM_Combat_ProcessReduceEnhancement(action : W3DamageAction, attackAct
 			}
 		}
 	}
-	else if (attackAction && playerAttacker && actorVictim && action.IsActionMelee())
+	else if (attackAction && playerAttacker && actorVictim && action.IsActionMelee() && !playerAttacker.inv.IsItemFists(weaponId))
 	{
 		if (attackAction.IsCountered())
 		{
@@ -107,7 +94,7 @@ function W3IM_Combat_ProcessReduceEnhancement(action : W3DamageAction, attackAct
 			//theGame.GetGuiManager().ShowNotification('NPC parried');
 			W3IM_Combat_ReduceEnhancementCharge(EET_EnhancedWeapon, 'fReduceCharges_ParriedMult');
 		}
-		else if (action.DealsAnyDamage() && !playerAttacker.inv.IsItemFists(weaponId))
+		else if (action.DealsAnyDamage())
 		{
 			//theGame.GetGuiManager().ShowNotification('NPC was hit');
 			W3IM_Combat_ReduceEnhancementCharge(EET_EnhancedWeapon, '');
@@ -121,7 +108,12 @@ function W3IM_Combat_ReduceEnhancementCharge(effectType : EEffectType, multOptio
 	var arrEnhancements : array<CBaseGameplayEffect>;
 	var enhancement : W3RepairObjectEnhancement;
 	
-	amountMult = W3IM_Combat_GetAmountMultiplier(multOption);	
+	amountMult = 1.0f;	
+	if (multOption != '')
+	{
+		amountMult = StringToFloat(theGame.GetInGameConfigWrapper().GetVarValue('W3IM_Combat', multOption));
+	}
+
 	arrEnhancements = GetWitcherPlayer().GetBuffs(effectType);
 	enhancement = (W3RepairObjectEnhancement)arrEnhancements[0];
 	enhancement.ReduceCharge(1.0f * amountMult);
